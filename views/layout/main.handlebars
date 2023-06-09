@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Your premier real estate agency">
+    <title>House Hunter</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/">
+            <img src="/public/images/Logo.png" class="logo-img" alt="House Hunter">
+            </a>
+        </div>
+
+        {{!-- hamburger for mobile view --}}
+        <div class="navbar-hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-list" id="navList">
+            <li><a href="/" class="nav-link">For Sale</a></li>
+             <li><a href="/" class="nav-link">For Rent</a></li>
+              <li><a href="/" class="nav-link">Sell</a></li>
+             <li><a href="/" class="nav-link">About Us</a></li>
+              <li><a href="/" class="nav-link">Search Bar</a></li>
+            {{#if loggedIn}}
+            <li class="nav-link" id="log-out">Log Out</li>
+            <script src="/js/logout.js"></script>
+            {{else}}
+            <li><a href="/login" class="nav-link">Log In</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+
+
+    {{{ body }}}
+    
+
+
+</body>
+
+</html>
