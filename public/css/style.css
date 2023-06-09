@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Merriweather", serif;
 }
 
 :root {
@@ -11,7 +12,7 @@
   position: sticky;
   top: 0;
   background-color: #254562;
-  padding: 10px 30px 10px 30px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
@@ -20,25 +21,76 @@
 
 .logo-img {
   margin-top: 10px;
-  height: auto;
+  height: 70px;
   width: auto;
+  font-size: large;
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  font-size: 1.25rem;
-  font-family: "Merriweather", serif;
-  font-family: "Nunito", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
+.navbar {
+  background-color: #254562;
+  overflow: hidden;
 }
 
-.nav-list li {
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.navbar-hamburger {
-  display: none;
+.navbar a:hover {
+  background-color: white;
+  color: #254562;
+}
+
+.active {
+  color: white;
+}
+
+/* CSS for the search bar */
+.search-container {
+  float: right;
+}
+
+.search-container input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 10px;
+  background: white;
+  color: #254562;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+/* CSS for the login button */
+.login-button {
+  float: right;
+  font-size: 17px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.login-button button {
+  padding: 6px 10px;
+  font-size: 17px;
+  background-color: white;
+  color: #254562;
+  border: none;
+  cursor: pointer;
+}
+
+.login-button button:hover {
+  background-color: greenyellow;
+  color: black;
 }
