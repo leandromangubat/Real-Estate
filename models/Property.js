@@ -1,7 +1,4 @@
 const { Model, DataTypes } = require("sequelize");
-const {
-  databaseVersion,
-} = require("../../../UTOR-VIRT-FSF-PT-02-2023-U-LOLC/14-MVC/01-Activities/16-Stu_Sessions/Solved/config/connection");
 const sequelize = require("../config/connection");
 
 class Property extends Model {}
