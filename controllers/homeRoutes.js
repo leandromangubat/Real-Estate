@@ -12,8 +12,9 @@ router.get('/', async (req, res) => {
     // serialize the data
     const sales = saleData.map((sales) => sales.get({ plain: true }));
     // we should render all the posts here
-    res.render('all-posts-admin', { sales, loggedIn: req.session.loggedIn});
+    res.render('homePage', { sales, logged_in: req.session.logged_in});
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

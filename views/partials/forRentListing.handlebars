@@ -1,0 +1,25 @@
+<section>
+  {{!-- Section to display all images for listing --}}
+  <section id="images">
+
+  </section>
+
+  {{!-- Section to display information related to listing --}}
+  {{!-- TODO: ADD CSS PROPERTIES --}}
+  <section>
+    {{!-- Section to display address info including street number, name, unit number, postal code and city --}}
+    <section id="listing-address">
+      <h1>{{forRentListing.streetNumber}} {{forRentListing.streetName}}</h1>,
+      <h2>{{#if forRentListing.unitNumber}} Unit {{forRentListing.unitNumber}}</h2>, {{forRentListing.postalCode}}, {{forRentListing.city}}
+    </section>
+
+  {{!-- Section to display listing details such as price, number of bedrooms, bathrooms, etc. --}}
+    <section id="listing-details">
+      <ul>
+        <li>Listing Price: {{forRentListing.price}}</li>
+        <li>Number of Bedrooms: {{forRentListing.bedrooms}}</li>
+        <li>Number of Bathrooms: {{forRentListing.bathrooms}}</li>
+      </ul>
+    </section>
+  </section>
+</section>  
