@@ -26,19 +26,15 @@
   font-size: large;
 }
 
-.navbar {
-  background-color: #254562;
-  overflow: hidden;
+.navbar-links {
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
-  float: left;
-  display: block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  padding: 10px;
 }
 
 .navbar a:hover {
@@ -52,20 +48,20 @@
 
 /* CSS for the search bar */
 .search-container {
-  float: right;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .search-container input[type="text"] {
   padding: 6px;
-  margin-top: 8px;
   font-size: 17px;
   border: none;
 }
 
 .search-container button {
   padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 10px;
+  margin-left: 10px;
   background: white;
   color: #254562;
   font-size: 17px;
@@ -75,10 +71,8 @@
 
 /* CSS for the login button */
 .login-button {
-  float: right;
   font-size: 17px;
-  margin-top: 8px;
-  margin-right: 8px;
+  margin-left: 10px;
 }
 
 .login-button button {
@@ -96,7 +90,6 @@
 }
 
 /* Mobile Version Styles */
-
 @media screen and (max-width: 480px) {
   .navbar {
     flex-wrap: wrap;
@@ -111,17 +104,12 @@
   }
 
   .navbar a {
-    float: none;
-    display: block;
-    text-align: center;
-    padding: 10px 0;
+    padding: 5px;
     font-size: 16px;
   }
 
   .search-container {
-    float: none;
-    text-align: center;
-    margin-bottom: 10px;
+    margin-left: 0;
   }
 
   .search-container input[type="text"] {
@@ -129,13 +117,11 @@
   }
 
   .search-container button {
-    margin-top: 0;
-    margin-right: 0;
+    margin-left: 0;
   }
 
   .login-button {
-    float: none;
-    text-align: center;
+    margin-left: 0;
   }
 }
 
