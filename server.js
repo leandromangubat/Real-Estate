@@ -13,6 +13,7 @@ const sequelize = require("./config/connection");
 
 // create express server, set port
 const app = express();
+const upload = multer({ dest: "uploads/" });
 const PORT = process.env.PORT || 3001;
 
 // handlebars configurations, inform express
