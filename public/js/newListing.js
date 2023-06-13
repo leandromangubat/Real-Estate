@@ -3,7 +3,7 @@ async function newListing(event) {
 
   const title = document.querySelector("#new-post-title").value.trim();
   const post_body = document.querySelector("#new-post-body").value.trim();
-  const fileInput = document.querySelector("#photo-upload");
+  const fileInput = document.querySelector("#myFile");
   const formData = new FormData();
 
   formData.append("title", title);
@@ -29,6 +29,10 @@ async function newListing(event) {
   }
 }
 
+document.querySelector("#new-post-form").addEventListener("submit", newListing);
+
 document
-  .querySelector("#new-listing-form")
-  .addEventListener("submit", newListing);
+  .querySelector("#photo-upload-form")
+  .addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form submission
+  });

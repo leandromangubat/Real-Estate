@@ -1,4 +1,4 @@
-const router = require("express").Router;
+const router = require("express").Router();
 const { Property, User } = require("../../models");
 const withAuth = require("../../utils/auth"); // users can post/delete so long as they are logged in
 

@@ -1,23 +1,24 @@
 <div class="card-container">
-    <div class="new-post-card">
-        <form id="new-post-form">
-            <label for="new-post-title">Title</label> <br>
-            <input type="text" id="new-post-title"> <br>
+  <div class="new-post-card">
+    <form id="new-post-form">
+      <label for="new-post-title">Title</label><br>
+      <input type="text" id="new-post-title"><br>
 
-            <label for="new-post-body">Body</label> <br>
-            <textarea id="new-post-body"></textarea> <br>
+      <label for="new-post-body">Body</label><br>
+      <textarea id="new-post-body"></textarea><br>
 
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="photo">
-                <input type="submit" value="Upload">
-            </form>
+      <form id="photo-upload-form" enctype="multipart/form-data">
+        <input type="file" id="myFile" name="photo">
+        <input type="submit" value="Upload">
+      </form>
 
-            <div class="btn-container">
-                <button type="submit" class="submit-btn">Post</button>
-            </div>
-        </form>
-    </div>
+      <div class="btn-container">
+        <button type="submit" class="submit-btn">Post</button>
+      </div>
+    </form>
+  </div>
 </div>
+
 
 
 <script src="/js/newListings.js"></script>
