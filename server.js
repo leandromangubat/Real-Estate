@@ -5,6 +5,9 @@ const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
 
+//New package
+const multer = require("multer");
+
 // import db connection
 const sequelize = require("./config/connection");
 
