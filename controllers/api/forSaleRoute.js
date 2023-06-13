@@ -37,17 +37,16 @@ router.get("/:id", async (req, res) => {
       ],
     });
     res.json(forSale);
-    const forSaleListings = forSale.map((listing) =>
+    const forSaleListing = forSale.map((listing) =>
       listing.get({ plain: true })
     );
-    res.render("listing", {
-      forSaleListings,
+    res.render("forSaleListing", {
+      forSaleListing,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json({ message: "server error" });
   }
 });
-
 
 module.exports = router;
