@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 router.post("/signup", async (req, res) => {
   try {
     const newUser = new User();
-    newUser.username = req.body.username;
+    newUser.name = req.body.name;
     newUser.email = req.body.email;
     newUser.password = req.body.password;
 
@@ -38,7 +38,7 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { username: req.body.username },
+      where: { email: req.body.email },
     });
 
     if (!userData) {
