@@ -12,11 +12,11 @@
   position: sticky;
   top: 0;
   background-color: #254562;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
   color: white;
+  align-content: space-around;
 }
 
 .logo-img {
@@ -89,39 +89,74 @@
   color: black;
 }
 
-/* Mobile Version Styles */
-@media screen and (max-width: 480px) {
+/* CSS for the login button */
+.signup-button {
+  font-size: 17px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.signup-button button {
+  padding: 6px 10px;
+  font-size: 17px;
+  background-color: white;
+  color: #254562;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-button button:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
   .navbar {
-    flex-wrap: wrap;
-    padding: 10px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
 
-  .logo-img {
-    margin-top: 5px;
-    height: 50px;
-    width: auto;
-    font-size: medium;
+  .navbar-links {
+    flex-direction: column;
+    margin-top: 10px;
   }
 
   .navbar a {
     padding: 5px;
-    font-size: 16px;
+    margin-right: 0;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .search-container {
+    margin-top: 10px;
     margin-left: 0;
   }
 
   .search-container input[type="text"] {
-    margin-top: 0;
+    font-size: 14px;
+    padding: 4px;
   }
 
   .search-container button {
-    margin-left: 0;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-left: 5px;
   }
 
   .login-button {
     margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .login-button button {
+    font-size: 14px;
+    padding: 4px 8px;
   }
 }
 
@@ -154,7 +189,6 @@ input[type="text"],
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
   font-size: 16px;
