@@ -30,11 +30,11 @@
       </div>
 
       {{!-- hamburger for mobile view --}}
-      <div class="navbar-hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div class="navbar-hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
        <div class="navbar">
         <a class="active" href="#">For Sale</a>
@@ -48,20 +48,13 @@
         <div class="login-button">
           <button type="submit">Sign In</button>
         </div>
-          <div class="login-button">
+          <div class="signup-button">
             <button type="submit">Sign Up</button>
         </div>
       
       </div>
       
-        {{#if loggedIn}}
-        <li class="nav-link" id="log-out">Log Out</li>
-        <script src="/js/logout.js"></script>
-        {{else}}
-        <li><a href="/login" class="nav-link">Log In</a></li>
-        {{/if}}
-      </ul>
-    </nav>
+    
 
     {{{ body }}}
 
