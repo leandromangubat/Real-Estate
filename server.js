@@ -23,10 +23,10 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    // maxAge: 300000,
-    // httpOnly: true,
-    // secure: false,
-    // sameSite: 'strict',
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: "strict",
   },
   resave: false,
   saveUninitialized: true,
@@ -44,7 +44,7 @@ app.set("view engine", "handlebars");
 // serve static files/import css with direct path
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "Public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // connect to routes in 'controller' folder
 app.use(routes);
