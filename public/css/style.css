@@ -148,13 +148,24 @@
     padding: 4px 8px;
     margin-left: 5px;
   }
-
   .login-button {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
   }
 
   .login-button button {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .signup-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+  .signup-button button {
     font-size: 14px;
     padding: 4px 8px;
   }
@@ -228,4 +239,13 @@ input[type="file"] {
   .submit-btn {
     font-size: 14px;
   }
+}
+
+#carouselExample {
+  max-width: 1250px;
+  margin: 30px auto; /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
