@@ -42,6 +42,8 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // serve static files/import css with direct path
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // connect to routes in 'controller' folder
