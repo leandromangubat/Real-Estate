@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     const forSaleListings = forSale.map((listing) =>
       listing.get({ plain: true })
     );
-    res.render("saleListing", {
+    res.render("forSaleListing", {
       forSaleListings,
       logged_in: req.session.logged_in,
     });
