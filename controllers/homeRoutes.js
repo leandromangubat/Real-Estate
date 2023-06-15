@@ -64,4 +64,9 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.get('/about',(req,res)=>{
+  res.render('./partials/about');
+})
+
+
 module.exports = router;
