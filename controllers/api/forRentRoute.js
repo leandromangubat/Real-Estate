@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Property, User } = require("../../models");
+const { Property, User, ListingPhotos } = require("../../models");
 const withAuth = require("../../utils/auth"); // users can post/delete so long as they are logged in
 
 router.get("/", async (req, res) => {
@@ -9,6 +9,12 @@ router.get("/", async (req, res) => {
       where: {
         listingType: "for rent",
       },
+      include: [
+        {
+          model: ListingPhotos,
+          attributes: ["url"],
+        },
+      ],
     });
     res.json(forRent);
     const forRentListings = forRent.map((listing) =>
@@ -33,6 +39,10 @@ router.get("/:id", async (req, res) => {
         {
           model: Property,
           include: [User],
+        },
+        {
+          model: ListingPhotos,
+          attributes: ["url"],
         },
       ],
     });

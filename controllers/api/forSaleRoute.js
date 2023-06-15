@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Property, User } = require("../../models");
+const { Property, User, ListingPhotos } = require("../../models");
 const withAuth = require("../../utils/auth"); // users can post/delete so long as they are logged in
 
 router.get("/", async (req, res) => {
@@ -9,6 +9,12 @@ router.get("/", async (req, res) => {
       where: {
         listingType: "for sale",
       },
+      include: [
+        {
+          model: ListingPhotos,
+          attributes: ["url"],
+        },
+      ],
     });
     res.json(forSale);
     const forSaleListings = forSale.map((listing) =>
@@ -26,13 +32,17 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   // find for sale posting by id
   try {
-    const forSale = await ForSale.findByPk({
+    const forSale = await Property.findByPk({
       where: { id: req.params.id },
       include: [
         User,
         {
           model: Property,
           include: [User],
+        },
+        {
+          model: ListingPhotos,
+          attributes: ["url"],
         },
       ],
     });
@@ -49,39 +59,34 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post('/', withAuth, async(req,res)=>{
-  try{
+router.post("/", withAuth, async (req, res) => {
+  try {
     const newSale = await Property.create({
       ...req.body,
       ownerID: req.session.ownerID,
     });
 
     res.status(200).json(newSale);
-  } catch(err){
+  } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async(req,res)=>{
-  try{
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
     const saleData = await Property.destroy({
-      where:{
-        id:req.params.id,
-        ownerID:req.session.ownerID
+      where: {
+        id: req.params.id,
+        ownerID: req.session.ownerID,
       },
     });
-    if(!saleData){
-      res.status(404).json({message:'No listing found with this id!'});
+    if (!saleData) {
+      res.status(404).json({ message: "No listing found with this id!" });
     }
     res.status(200).json(saleData);
-  }catch(err){
+  } catch (err) {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
 
 module.exports = router;
