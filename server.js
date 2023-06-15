@@ -10,7 +10,7 @@ const multer = require("multer");
 
 // import db connection
 const sequelize = require("./config/connection");
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // create express server, set port
 const app = express();
@@ -21,18 +21,18 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: "Super secret secret",
   cookie: {
     maxAge: 300000,
     httpOnly: true,
     secure: false,
-    sameSite: 'strict',
+    sameSite: "strict",
   },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -42,7 +42,9 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // serve static files/import css with direct path
-app.use(express.static(path.join(__dirname, "Public")));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 // connect to routes in 'controller' folder
 app.use(routes);
