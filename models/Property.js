@@ -60,7 +60,7 @@ Property.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "gallery",
+    modelName: "property",
   }
 );
 
