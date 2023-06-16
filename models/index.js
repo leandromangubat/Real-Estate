@@ -20,4 +20,4 @@ ListingPhotos.belongsTo(Property, {
   foreignKey: "listingID",
 });
 
-module.exports = { User, Property };
+module.exports = { User, Property, ListingPhotos };

@@ -11,13 +11,14 @@ ListingPhotos.init(
       allowNull: false,
       autoIncrement: true,
     },
-    listing_id: {
+    listingID: {
       type: DataTypes.INTEGER,
       references: {
         model: "property",
-        key: "id,",
+        key: "id",
       },
     },
+    
     url: {
       type: DataTypes.STRING,
       allowNull: true,
