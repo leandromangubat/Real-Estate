@@ -1,26 +1,26 @@
-<section>
-  {{!-- Section to display all images for listing --}}
-  <section id="images">
+    <section class="container col w-full">
+      <section class="row m-auto bg-warning">
 
-  </section>
+   <section id="images" class="col col-7 h-100 bg-warning">
+  <div class="image-box">
+    <img src="https://placehold.co/600x400" alt="Image Description">
+  </div>
+</section>
 
-  {{!-- Section to display information related to listing --}}
-  {{!-- TODO: ADD CSS PROPERTIES --}}
-  <section>
-    {{!-- Section to display address info including street number, name, unit number, postal code and city --}}
-    <section id="listing-address">
-      <h1>{{forSaleListing.streetNumber}} {{forSaleListing.streetName}}</h1>,
-      <h2>{{#if forSaleListing.unitNumber}} Unit {{forSaleListing.unitNumber}}</h2>, {{forSaleListing.postalCode}}, {{forSaleListing.city}}
+        <section class="col flex-column p-0">
+
+          <section id="listing-address" class="flex-row px-2 pb-2 bg-warning">
+              <div class="col text-center font-weight-bolder " id="street">{{forSaleListing.streetNumber}} {{forSaleListing.streetName}}</div>
+              {{#if forSaleListing.unitNumber}}
+              <div id="unit" class="text-center font-italic text-muted">Unit Number</div>
+              {{/if}}
+              <div class="text-center">{{forSaleListing.postalCode}}, {{forSaleListing.city}}</div>
+          </section>
+          <section>
+            <div id="price">Listing Price: {{forSaleListing.price}}</div>
+            <div id="bedrooms">Number of Bedrooms: {{forSaleListing.bedrooms}}</div>
+            <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
+          </section>
+          </section>
+        </section>
     </section>
-
-  {{!-- Section to display listing details such as price, number of bedrooms, bathrooms, etc. --}}
-
-    <section id="listing-details">
-      <ul>
-        <li>Listing Price: {{forSaleListing.price}}</li>
-        <li>Number of Bedrooms: {{forSaleListing.bedrooms}}</li>
-        <li>Number of Bathrooms: {{forSaleListing.bathrooms}}</li>
-      </ul>
-    </section>
-  </section>
-</section>  
