@@ -1,25 +1,24 @@
-<section>
-  {{!-- Section to display all images for listing --}}
-  <section id="images">
+    <section class="container col w-full">
+      <section class="row m-auto bg-warning">
 
-  </section>
+        <section id="images" class="col col-7 h-100 bg-warning">
+          IMAGES HERE
+        </section>
 
-  {{!-- Section to display information related to listing --}}
-  {{!-- TODO: ADD CSS PROPERTIES --}}
-  <section>
-    {{!-- Section to display address info including street number, name, unit number, postal code and city --}}
-    <section id="listing-address">
-      <h1>{{forRentListing.streetNumber}} {{forRentListing.streetName}}</h1>,
-      <h2>{{#if forRentListing.unitNumber}} Unit {{forRentListing.unitNumber}}</h2>, {{forRentListing.postalCode}}, {{forRentListing.city}}
+        <section class="col flex-column p-0">
+
+          <section id="listing-address" class="flex-row px-2 pb-2 bg-warning">
+              <div class="col text-center font-weight-bolder " id="street">{{forRentListing.streetNumber}} {{forRentListing.streetName}}</div>
+              {{#if forRentListing.unitNumber}}
+              <div id="unit" class="text-center font-italic text-muted">Unit Number</div>
+              {{/if}}
+              <div class="text-center">{{forRentListing.postalCode}}, {{forRentListing.city}}</div>
+          </section>
+          <section>
+            <div id="price">Listing Price: {{forRentListing.price}}</div>
+            <div id="bedrooms">Number of Bedrooms: {{forRentListing.bedrooms}}</div>
+            <div id="bathrooms">Number of Bathrooms: {{forRentListing.bathrooms}}</div>
+          </section>
+          </section>
+        </section>
     </section>
-
-  {{!-- Section to display listing details such as price, number of bedrooms, bathrooms, etc. --}}
-    <section id="listing-details">
-      <ul>
-        <li>Listing Price: {{forRentListing.price}}</li>
-        <li>Number of Bedrooms: {{forRentListing.bedrooms}}</li>
-        <li>Number of Bathrooms: {{forRentListing.bathrooms}}</li>
-      </ul>
-    </section>
-  </section>
-</section>  
