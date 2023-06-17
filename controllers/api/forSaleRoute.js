@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     const forSale = await Property.findAll({
       where: {
-        listingType: "for sale",
+        listingType: "For Sale",
       },
       include: [
         {
