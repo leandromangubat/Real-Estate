@@ -32,7 +32,7 @@ Property.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     bedrooms: {
