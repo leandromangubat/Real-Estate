@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     const forSaleListings = forSale.map((listing) =>
       listing.get({ plain: true })
     );
-    res.render("forSaleListing", {
+    res.render("./partials/forSaleListing", {
       forSaleListings,
       logged_in: req.session.logged_in,
     });
@@ -32,29 +32,30 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   // find for sale posting by id
   try {
-    const forSale = await Property.findByPk({
-      where: { id: req.params.id },
+    const forSale = await Property.findByPk(req.params.id, {
       include: [
         User,
-        {
-          model: Property,
-          include: [User],
-        },
         {
           model: ListingPhotos,
           attributes: ["url"],
         },
       ],
     });
+    if (!forSale) {
+      return res
+        .status(404)
+        .json({ message: "No listing found with this id!" });
+    }
     res.json(forSale);
     const forSaleListing = forSale.map((listing) =>
       listing.get({ plain: true })
     );
-    res.render("forSaleListing", {
+    res.render("./partials/forSaleListing", {
       forSaleListing,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ message: "server error" });
   }
 });
