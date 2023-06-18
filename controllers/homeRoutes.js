@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     // serialize the data
     const sales = saleData.map((sales) => sales.get({ plain: true }));
     // we should render all the posts here
-    res.render("homePage", { sales, logged_in: req.session.logged_in });
+    res.render("homePage", { sales, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -38,7 +38,7 @@ router.get("/sale/:id", withAuth, async (req, res) => {
       // serialize the data
       const sale = saleData.get({ plain: true });
       console.log(sale);
-      res.render("single-sale", { sale, logged_in: req.session.logged_in });
+      res.render("single-sale", { sale, loggedI: req.session.loggedIn });
     } else {
       res.status(404).end();
     }
@@ -48,7 +48,7 @@ router.get("/sale/:id", withAuth, async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/");
     return;
   }
@@ -56,7 +56,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/dashboard");
     return;
   }
