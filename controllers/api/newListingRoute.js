@@ -3,7 +3,7 @@ const { userInfo } = require("os");
 const { Property, User, ListingPhotos } = require("../../models");
 const withAuth = require("../../utils/auth"); // users can post/delete so long as they are logged in
 
-router.put("/upload", withAuth, async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   const newListingInfo = {
     streetNumber: $("#street-number").value,
     streetName: $("#street-name").value,

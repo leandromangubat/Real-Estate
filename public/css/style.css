@@ -73,9 +73,10 @@
 .login-button {
   font-size: 17px;
   margin-left: 10px;
+  color: gray;
 }
 
-.login-button button {
+.login-button a {
   padding: 6px 10px;
   font-size: 17px;
   background-color: white;
@@ -84,7 +85,7 @@
   cursor: pointer;
 }
 
-.login-button button:hover {
+.login-button a:hover {
   background-color: greenyellow;
   color: black;
 }
@@ -309,4 +310,16 @@ input[type="file"] {
     padding: 0.25rem;
     font-size: 14px;
   }
+}
+
+.header-color {
+  color: #254562;
+  font-weight: 500;
+  font-size: calc(1.475rem + 2.7vw);
+  line-height: 1.2;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #ff8551;
 }
