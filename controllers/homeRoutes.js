@@ -87,7 +87,11 @@ router.get("/forSale", (req, res) => {
 });
 
 router.get("/newListing", (req, res) => {
-  res.render("./partials/newListing");
+  if (req.session.loggedIn) {
+    res.render("./partials/newListing");
+    return;
+  }
+  res.redirect("/login");
 });
 
 module.exports = router;
