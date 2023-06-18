@@ -38,7 +38,7 @@ router.get("/sale/:id", withAuth, async (req, res) => {
       // serialize the data
       const sale = saleData.get({ plain: true });
       console.log(sale);
-      res.render("single-sale", { sale, loggedIn: req.session.loggedIn });
+      res.render("single-sale", { sale, logged_in: req.session.logged_in });
     } else {
       res.status(404).end();
     }
@@ -48,7 +48,7 @@ router.get("/sale/:id", withAuth, async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect("/");
     return;
   }
@@ -56,7 +56,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect("/dashboard");
     return;
   }
