@@ -1,4 +1,3 @@
-// Handler function for chess login form submission
 const loginFormHandler = async (event) => {
   event.preventDefault();
   // Get the values of the username and password input fields
@@ -12,18 +11,16 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
-    // If the request was successful, redirect to the homepage
+
     if (response.ok) {
-      document.location.replace("/"); // When successful, load the homepage
+      document.location.replace("/");
+      alert("Successful login!");
     } else {
-      // If the request was unsuccessful, show an alert
-      alert("Failed to log in."); // When unsuccessful, show alert
+      alert("Failed to log in.");
     }
   }
 };
 
-// Event listener for the chess login form
-const loginForm = document.querySelector(".login-form");
-if (loginForm) {
-  loginForm.addEventListener("submit", loginFormHandler);
-}
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);
