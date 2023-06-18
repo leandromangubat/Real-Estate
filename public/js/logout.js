@@ -6,6 +6,7 @@ const userLogout = async () => {
 
   if (response.ok) {
     document.location.replace("/"); // When successful, load the homepage
+    alert("Successfully logged out!");
   } else {
     alert("Failed to log out."); // When unsuccessful, show alert
   }

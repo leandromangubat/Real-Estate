@@ -73,6 +73,7 @@
 .login-button {
   font-size: 17px;
   margin-left: 10px;
+  color: gray;
 }
 
 .login-button a {
