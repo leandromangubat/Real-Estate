@@ -1,11 +1,43 @@
+
+{{!-- TODO: ADD CSS STYLING TO ALL INPUTS --}}
 <div class="card-container">
   <div class="new-post-card">
     <form id="new-post-form">
-      <label for="new-post-title">Title</label><br>
-      <input type="text" id="new-post-title"><br>
+      <label for="new-post-number">Street Number</label><br>
+      <input type="text" id="street-number"><br>
 
-      <label for="new-post-body">Body</label><br>
-      <textarea id="new-post-body"></textarea><br>
+      <label for="new-post-name">Street Name</label><br>
+      <input type="text" id="street-name"><br>
+
+      <label for="new-post-unit-number">Unit Number</label><br>
+      <input type="text" id="unit-number"><br>
+
+      <label for="new-post-postal-code">Postal Code</label><br>
+      <input id="postal-code"><br>
+
+      <label for="new-post-city">City</label><br>
+      <input type="text" id="city"><br>
+
+      <label for="new-post-price">Price</label><br>
+      <input type="text" id="price"><br>
+
+      <label for="new-post-bedrooms">Number of Bedrooms</label><br>
+      <input type="text" id="bedrooms"><br>
+
+      <label for="new-post-bathrooms">Bathrooms</label><br>
+      <input type="text" id="bathrooms"><br>
+
+
+{{!-- TODO: FIX DROPDOWN TO UPDATE TEXT WHEN OPTION IS SELECTED  --}}
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Select an option
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item">For Sale</a></li>
+          <li><a class="dropdown-item">For Rent </a></li>
+        </ul>
+      </div>
 
       <form id="photo-upload-form" enctype="multipart/form-data">
         <input type="file" id="myFile" name="photo">
@@ -18,7 +50,3 @@
     </form>
   </div>
 </div>
-
-
-
-<script src="/js/newListings.js"></script>
