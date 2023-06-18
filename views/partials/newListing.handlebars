@@ -32,7 +32,7 @@
 
 {{!-- TODO: FIX DROPDOWN TO UPDATE TEXT WHEN OPTION IS SELECTED  --}}
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="listing-type">
           Select an option
         </button>
         <ul class="dropdown-menu">
@@ -47,8 +47,10 @@
       </form>
 
       <div class="btn-container">
-        <button type="submit" class="submit-btn">Post</button>
+        <button type='submit' class="submit-btn" id="new-post-button">Post</button>
       </div>
     </form>
   </div>
 </div>
+
+<script src="./js/newListing.js"> </script>
