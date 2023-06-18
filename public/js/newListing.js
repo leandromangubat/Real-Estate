@@ -19,6 +19,7 @@ async function newListing(event) {
     bedrooms: $("#bedrooms").value.trim(),
     bathrooms: $("#bathrooms").value.trim(),
     listingType: $("#listing-type").value.trim(),
+    // ownerID:
   };
 
   if (newListingInfo.streetNumber && newListingInfo.price) {
@@ -40,12 +41,12 @@ async function newListing(event) {
   }
 }
 
-const postForm = $("#new-post-button");
+const postForm = document.querySelector("#new-post-button");
 
-postForm.on("click", newListing);
+postForm.addEventListener("click", newListing);
 
-document
-  .querySelector("#photo-upload-form")
-  .addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent form submission
-  });
+// document
+//   .querySelector("#photo-upload-form")
+//   .addEventListener("submit", (event) => {
+//     event.preventDefault(); // Prevent form submission
+//   });
