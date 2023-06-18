@@ -44,13 +44,16 @@
           <input type="text" placeholder="Search Here..." />
           <button type="submit">Search</button>
         </div>
-        <div class="login-button">
-          <button type="submit">Sign In</button>
-        </div>
-        <div class="signup-button">
-          <button type="submit">Sign Up</button>
-        </div>
-
+        {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+          <div class="login-button">
+            <button href="/login" type="submit">Sign In</button>
+          </div>
+          <div class="signup-button">
+            <button href="./signup" type="submit">Sign Up</button>
+          </div>
+        {{/if}}
       </div>
 
     </nav>
@@ -61,6 +64,8 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/login.js"></script>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
