@@ -89,4 +89,5 @@ router.get("/forSale", (req, res) => {
 router.get("/newListing", (req, res) => {
   res.render("./partials/newListing");
 });
+
 module.exports = router;
