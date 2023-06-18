@@ -8,6 +8,6 @@ const newListing = require("./newListingRoute");
 router.use("/forsale", forSaleRoutes);
 router.use("/forrent", forRentRoutes);
 router.use("/users", userRoutes);
-router.use("/sell", newListing);
+router.use("/newListing", newListing);
 
 module.exports = router;
