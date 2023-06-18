@@ -318,3 +318,9 @@ input[type="file"] {
   line-height: 1.2;
 
 }
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #ff8551;
+
+}
