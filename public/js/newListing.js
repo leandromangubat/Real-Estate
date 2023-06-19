@@ -27,7 +27,6 @@ async function newListing(event) {
     bedrooms: document.querySelector("#bedrooms").value.trim(),
     bathrooms: document.querySelector("#bathrooms").value.trim(),
     listingType: document.querySelector("#listing-type").value.trim(),
-    // ownerID:
   };
 
   if (newListingInfo) {
