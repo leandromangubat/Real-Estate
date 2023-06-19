@@ -12,12 +12,12 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const newListing = await Property.create({
-      ...req.body,
-      ownerID: req.session.user_id,
-    });
+    const newListing = await Property.create(
+      req.body
+      //ownerID: req.session.user_id,
+    );
 
     res.status(200).json(newListing);
   } catch (err) {
