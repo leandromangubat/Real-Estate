@@ -17,7 +17,6 @@ router.post("/", async (req, res) => {
     const newListing = await Property.create({
       ...req.body,
       ownerID: req.session.user_id,
-      //ownerID: req.session.user_id,
     });
 
     res.status(200).json(newListing);
