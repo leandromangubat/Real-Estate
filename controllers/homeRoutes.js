@@ -75,7 +75,7 @@ router.post("/logout", (req, res) => {
 });
 
 router.get("/about", (req, res) => {
-  res.render("./partials/about");
+  res.render("./partials/about", { loggedIn: req.session.loggedIn });
 });
 
 router.get("/forRent", (req, res) => {
@@ -88,7 +88,7 @@ router.get("/forSale", (req, res) => {
 
 router.get("/newListing", (req, res) => {
   if (req.session.loggedIn) {
-    res.render("./partials/newListing");
+    res.render("./partials/newListing", { loggedIn: req.session.loggedIn });
     return;
   }
   res.redirect("/login");
