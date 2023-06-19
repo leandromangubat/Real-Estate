@@ -29,16 +29,16 @@ The following photos shows how the application looks:
 
 ## Technologies Used
 
-*Node.js
-*Express.js
-*Handlebars.js
-*MySQL
-*Sequelize ORM
-*Express-session
-*Cookies
-*Environment variables
-*Heroku
-*Nodemon
+- Node.js
+- Express.js
+- Handlebars.js
+- MySQL
+- Sequelize ORM
+- Express-session
+- Cookies
+- Environment variables
+- Heroku
+- Nodemon
 
 ## Installation
 
@@ -46,22 +46,28 @@ To run the House Hunter application on Heroku, click on the link here:
 
 To run the House Hunter application locally, follow these steps:
 
-*Clone the repository: git clone `https://github.com/your-username/house-hunter.git`.
-*Navigate to the project directory: `cd house-hunter`.
-*Install the dependencies using: `npm install`.
-*Set up the MySQL database and update the database credentials in the configuration files.
-*Start the application: `npm start`.
-*Open your web browser and visit `http://localhost:3000` to access the House Hunter application.
+- Clone the repository: git clone `https://github.com/your-username/house-hunter.git`.
+- Navigate to the project directory: `cd house-hunter`.
+- Install the dependencies using: `npm install`.
+- Set up the MySQL database and update the database credentials in the configuration files.
+- Start the application: `npm start`.
+- Open your web browser and visit `http://localhost:3001` to access the House Hunter application.
 
 ## Usage
 
 To use the House Hunter application, follow the steps below:
 
-\*Visit the deployed House Hunter application or run it locally by following the installation steps mentioned in the README.
+- Visit the deployed House Hunter application or run it locally by following the installation steps mentioned in the README.
 
-\*Upon accessing the application, you will be presented with the home page, where you can navigate through different sections using the navigation menu.
+- Upon accessing the application, you will be presented with the home page, where you can navigate through different sections using the navigation menu.
 
 ## Credits
+
+- [Khyati Gandhi](https://github.com/thekhyatigandhi)
+- [Leandro Mangubat](https://github.com/leandromangubat)
+- [Gurveer Madurai](https://github.com/gurverm)
+- [Nadeem Talaat](https://github.com/NadeemTalaat)
+- [Mahdi El-Harake](https://github.com/mahdi83777)
 
 ## License
 
