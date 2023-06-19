@@ -5,17 +5,18 @@
 }
 
 :root {
-  /* color palette */
+  --primary-color: #254562;
+  --text-color: #ffffff;
 }
 
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #254562;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-  color: white;
+  color: var(--text-color);
   align-content: space-around;
 }
 
@@ -32,18 +33,18 @@
 }
 
 .navbar a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px;
 }
 
 .navbar a:hover {
-  background-color: white;
-  color: #254562;
+  background-color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .active {
-  color: white;
+  color: var(--text-color);
 }
 
 /* CSS for the search bar */
@@ -62,8 +63,8 @@
 .search-container button {
   padding: 6px 10px;
   margin-left: 10px;
-  background: white;
-  color: #254562;
+  background: var(--text-color);
+  color: var(--primary-color);
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -79,8 +80,8 @@
 .login-button a {
   padding: 6px 10px;
   font-size: 17px;
-  background-color: white;
-  color: #254562;
+  background-color: var(--text-color);
+  color: var(--primary-color);
   border: none;
   cursor: pointer;
 }
@@ -100,8 +101,8 @@
 .signup-button button {
   padding: 6px 10px;
   font-size: 17px;
-  background-color: white;
-  color: #254562;
+  background-color: var(--text-color);
+  color: var(--primary-color);
   border: none;
   cursor: pointer;
 }
@@ -212,7 +213,7 @@ input[type="file"] {
 
 .submit-btn {
   background-color: #4caf50;
-  color: white;
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -313,7 +314,7 @@ input[type="file"] {
 }
 
 .header-color {
-  color: #254562;
+  color: var(--primary-color);
   font-weight: 500;
   font-size: calc(1.475rem + 2.7vw);
   line-height: 1.2;
@@ -321,5 +322,5 @@ input[type="file"] {
 footer {
   position: relative;
   bottom: 0;
-  background-color: #ff8551;
+  background-color: var(--primary-color);
 }
