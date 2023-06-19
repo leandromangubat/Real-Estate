@@ -7,8 +7,7 @@ const seedAll = async () => {
 
   await seedUser();
 
-  //await seedProperty();
-  //seedProperty needs work. Would not seed :(
+  await seedProperty();
 
   process.exit(0);
 };

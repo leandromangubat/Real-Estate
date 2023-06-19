@@ -5,17 +5,18 @@
 }
 
 :root {
-  /* color palette */
+  --primary-color: #254562;
+  --text-color: #ffffff;
 }
 
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #254562;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-  color: white;
+  color: var(--text-color);
   align-content: space-around;
 }
 
@@ -32,18 +33,18 @@
 }
 
 .navbar a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px;
 }
 
 .navbar a:hover {
-  background-color: white;
-  color: #254562;
+  background-color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .active {
-  color: white;
+  color: var(--text-color);
 }
 
 /* CSS for the search bar */
@@ -62,8 +63,8 @@
 .search-container button {
   padding: 6px 10px;
   margin-left: 10px;
-  background: white;
-  color: #254562;
+  background: var(--text-color);
+  color: var(--primary-color);
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -73,18 +74,19 @@
 .login-button {
   font-size: 17px;
   margin-left: 10px;
+  color: gray;
 }
 
-.login-button button {
+.login-button a {
   padding: 6px 10px;
   font-size: 17px;
-  background-color: white;
-  color: #254562;
+  background-color: var(--text-color);
+  color: var(--primary-color);
   border: none;
   cursor: pointer;
 }
 
-.login-button button:hover {
+.login-button a:hover {
   background-color: greenyellow;
   color: black;
 }
@@ -99,8 +101,8 @@
 .signup-button button {
   padding: 6px 10px;
   font-size: 17px;
-  background-color: white;
-  color: #254562;
+  background-color: var(--text-color);
+  color: var(--primary-color);
   border: none;
   cursor: pointer;
 }
@@ -211,7 +213,7 @@ input[type="file"] {
 
 .submit-btn {
   background-color: #4caf50;
-  color: white;
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -248,4 +250,77 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+/* for the sale and rent page */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.images {
+  flex: 1;
+}
+
+.text-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#listing-address {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#street {
+  font-weight: bold;
+}
+
+#unit {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#price,
+#bedrooms,
+#bathrooms {
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .images {
+    display: none;
+  }
+
+  .text-area {
+    padding: 0.5rem;
+  }
+
+  #price,
+  #bedrooms,
+  #bathrooms {
+    padding: 0.25rem;
+    font-size: 14px;
+  }
+}
+
+.header-color {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: calc(1.475rem + 2.7vw);
+  line-height: 1.2;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: var(--primary-color);
 }

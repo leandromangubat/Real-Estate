@@ -1,20 +1,23 @@
-    <section class="container col w-full">
-      <section class="row m-auto bg-warning">
+    <div class="mt-3 mt-md-5 mx-md-5">
+  <h1 class="header-color">For Rent</h1>
+</div>
+    <section class="container ">
+      <section class="row">
 
-   <section id="images" class="col col-7 h-100 bg-warning">
+   <section class="images">
   <div class="image-box">
-    <img src="https://placehold.co/600x400" alt="Image Description">
+    <img src="/images/sample1.png" alt="Image Description">
   </div>
 </section>
 
-        <section class="col flex-column p-0">
+        <section class="text-area">
 
-          <section id="listing-address" class="flex-row px-2 pb-2 bg-warning">
-              <div class="col text-center font-weight-bolder " id="street">{{forRentListing.streetNumber}} {{forRentListing.streetName}}</div>
+          <section id="listing-address" >
+              <div class="text-center" id="street">{{forRentListing.streetNumber}} {{forRentListing.streetName}}</div>
               {{#if forRentListing.unitNumber}}
-              <div id="unit" class="text-center font-italic text-muted">Unit Number</div>
+              <div id="unit" class="text-center">Unit Number</div>
               {{/if}}
-              <div class="text-center">{{forRentListing.postalCode}}, {{forRentListing.city}}</div>
+              <div class="text-center">{{forRentListing.postalCode}}{{forRentListing.city}}</div>
           </section>
           <section>
             <div id="price">Listing Price: {{forRentListing.price}}</div>

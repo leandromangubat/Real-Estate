@@ -1,27 +1,20 @@
-<h2 class='h3'>Sign in</h2>
-<form id='login-form' class='d-flex flex-column col-2'>
-  <div class='form-group my-2'>
-    <label for='login-name' class='text-muted'>Username or email</label>
-    <input
-      type='text'
-      class='form-control'
-      id='login-name'
-      placeholder='username'
-      required
-    />
+<div class="container mt-5 p-3 rounded">
+  <div class="login-card">
+    <h2 class="page-title mb-4">Login</h2>
+    <form class="form login-form">
+      <div class="form-group mb-3">
+        <label for="email-login">Email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
   </div>
-  <div class='form-group my-2'>
-    <label for='login-pass' class='text-muted'>Password</label>
-    <input
-      type='password'
-      class='form-control'
-      id='login-pass'
-      placeholder='password'
-      required
-    />
-  </div>
-  <button type='submit' class='btn btn-secondary my-2'>Sign in</button>
-</form>
-<a id='signup-btn' href='/signup'>Click here to sign up!</a>
+</div>
 
-<script src='../js/login.js'></script>
+<script src="./js/login.js"></script>
