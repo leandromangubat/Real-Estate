@@ -39,6 +39,7 @@ The following photos shows how the application looks:
 - Environment variables
 - Heroku
 - Nodemon
+- Multer
 
 ## Installation
 
