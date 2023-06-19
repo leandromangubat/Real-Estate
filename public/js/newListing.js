@@ -35,7 +35,7 @@ async function newListing(event) {
       const response = await fetch("/api/newlisting", {
         method: "POST",
         body: JSON.stringify(newListingInfo),
-        //headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" },
       });
 
       if (response.ok) {

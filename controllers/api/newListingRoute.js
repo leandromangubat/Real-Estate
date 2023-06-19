@@ -14,10 +14,11 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const newListing = await Property.create(
-      req.body
+    const newListing = await Property.create({
+      ...req.body,
+      ownerID: req.session.user_id,
       //ownerID: req.session.user_id,
-    );
+    });
 
     res.status(200).json(newListing);
   } catch (err) {
