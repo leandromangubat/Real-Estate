@@ -29,32 +29,28 @@ router.post("/", upload.single("photo"), async (req, res) => {
   try {
     let listingInfo = Object.assign(req.body, { ownerID: req.session.user_id });
 
+    console.log(listingInfo);
+
     const newListing = await Property.create({
       ...listingInfo,
     });
 
-    const photos = req.files;
+    const photo = req.file;
 
-    const listingID = req.body.listingID;
+    const listingID = newListing.id;
 
-    const listing = await ListingPhotos.findByPk(listingID);
+    const newPhoto = await ListingPhotos.create({
+      filename: req.file.filename,
+      listingID: listingID,
+    });
 
-    if (!listing) {
-      return res.status(404).json({ error: "Listing not found" });
+    if (listingInfo.listingType == "For Sale") {
+      alert("Listing created successfully!");
+      res.status(200).redirect("/forsale");
+    } else if (listingInfo.listingType == "For Rent") {
+      alert("Listing created successfully!");
+      res.status(200).redirect("/forrent");
     }
-
-    if (photos) {
-      const uploadedPhotos = await Promise.all(
-        photos.map(async (photo) => {
-          const listingPhoto = await ListingPhotos.create({
-            filename: photo.filename,
-            listingID: listingID,
-          });
-          return listingPhoto;
-        })
-      );
-    }
-    res.status(200).json({ newListing });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

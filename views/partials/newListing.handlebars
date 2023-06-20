@@ -7,50 +7,50 @@
     <div class="col-md-8">
       <div class="new-post-card">
         <div class="card-body">
-          <form id="new-post-form">
+          <form id="new-post-form" action="/api/newlisting" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="street-number" class="form-label">Street Number:</label>
-              <input type="text" id="street-number" class="form-control" name="street-number">
+              <input type="text" id="street-number" class="form-control" name="streetNumber">
             </div>
 
             <div class="form-group">
               <label for="street-name" class="form-label">Street Name:</label>
-              <input type="text" id="street-name" class="form-control" name="street-name">
+              <input type="text" id="street-name" class="form-control" name="streetName">
             </div>
 
             <div class="form-group">
               <label for="unit-number" class="form-label">Unit Number:</label>
-              <input type="text" id="unit-number" class="form-control">
+              <input type="text" id="unit-number" class="form-control" name="unitNumber">
             </div>
 
             <div class="form-group">
               <label for="postal-code" class="form-label">Postal Code:</label>
-              <input type="text" id="postal-code" class="form-control">
+              <input type="text" id="postal-code" class="form-control" name="postalCode">
             </div>
 
             <div class="form-group">
               <label for="city" class="form-label">City:</label>
-              <input type="text" id="city" class="form-control">
+              <input type="text" id="city" class="form-control" name="city">
             </div>
 
             <div class="form-group">
               <label for="price" class="form-label">Price:</label>
-              <input type="text" id="price" class="form-control">
+              <input type="text" id="price" class="form-control" name="price">
             </div>
 
             <div class="form-group">
               <label for="bedrooms" class="form-label">Number of Bedrooms:</label>
-              <input type="text" id="bedrooms" class="form-control">
+              <input type="text" id="bedrooms" class="form-control" name="bedrooms">
             </div>
 
             <div class="form-group">
               <label for="bathrooms" class="form-label">Bathrooms:</label>
-              <input type="text" id="bathrooms" class="form-control">
+              <input type="text" id="bathrooms" class="form-control" name="bathrooms">
             </div>
 
             <div class="form-group">
               <label for="listing-type">Listing Type:</label><br>
-              <select name="listing-type" id="listing-type">
+              <select id="listing-type" name="listingType">
                 <option value="For Sale">For Sale</option>
                 <option value="For Rent">For Rent</option>
               </select><br>
@@ -71,4 +71,4 @@
   </div>
 </div>
 
-<script src="/js/newListing.js"> </script>
+{{!-- <script src="/js/newListing.js"> </script> --}}
