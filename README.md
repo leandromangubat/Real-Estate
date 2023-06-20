@@ -25,9 +25,8 @@ House Hunter is a web application where you can search for properties, upload yo
 
 ## Application
 
-To run the House Hunter application on Heroku, [House Hunter](https://immense-woodland-75023-12b9f87d1bf1.herokuapp.com/)
-
-The following photos shows how the application looks:
+Run the [House Hunter](https://immense-woodland-75023-12b9f87d1bf1.herokuapp.com/) application on Heroku
+The following photos show how the application looks:
 ![Alt text]()
 ![Alt text]()
 
@@ -41,7 +40,7 @@ The following photos shows how the application looks:
 
 ## Installation
 
-To run the House Hunter application on Heroku, [House Hunter](https://immense-woodland-75023-12b9f87d1bf1.herokuapp.com/)
+Run the [House Hunter](https://immense-woodland-75023-12b9f87d1bf1.herokuapp.com/) application on Heroku
 
 To run the House Hunter application locally, follow these steps:
 
