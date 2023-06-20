@@ -1,7 +1,7 @@
 # HOUSE HUNTER</br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)</a>
-![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)](https://nodejs.org/en)</a>
+![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)(https://nodejs.org/en)</a>
 [![MySQL Badge](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=flat)](https://www.npmjs.com/package/mysql2)</a>
 [![Sequelize Badge](https://img.shields.io/badge/Sequelize-52B0E7?logo=sequelize&logoColor=fff&style=flat)](https://sequelize.org/docs/v6/)</a>
 [![Express Badge](https://img.shields.io/badge/Express-000?logo=express&logoColor=fff&style=flat)](https://expressjs.com/)</a>
@@ -18,7 +18,7 @@ House Hunter is a web application where you can search for properties, upload yo
 - [Technologies Used](#TechnologiesUsed)
 - [Installation](#Installation)
 - [Usage](#usage)
-- [Contributing] (#Contributing)
+- [Contributing](#Contributing)
 - [Credits](#credits)
 - [License](#license)
 
