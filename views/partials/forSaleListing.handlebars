@@ -1,12 +1,12 @@
-       <div class="mt-3 mt-md-5 mx-md-5">
-  <h1 class="header-color text-center">For Sale</h1>
+ <div class="mt-3 mt-md-5 mx-md-5">
+  <h1 class="header-color">For Sale</h1>
 </div>
 
 <div class="container px-4 text-right">
   <div class="row gx-3">
     <div class="col">
      <div class="p-3"><div class="card" style="width: 18rem;">
-  <img src="/images/sample1.png" class="card-img-top" alt="sample-img">
+  <img src="/images/sample3.png" class="card-img-top" alt="sample-img">
   <div class="card-body">
     <p class="card-text">
       <section id="listing-address" >
@@ -22,11 +22,12 @@
             <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
           </section>
     </p>
-    
+        <a href="/salelisting" class="btn btn-primary">More Info</a>
   </div>
 </div></div>
     </div>
-    <div class="col">
+
+      <div class="col">
      <div class="p-3"><div class="card" style="width: 18rem;">
   <img src="/images/sample1.png" class="card-img-top" alt="sample-img">
   <div class="card-body">
@@ -44,13 +45,14 @@
             <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
           </section>
     </p>
-    
+        <a href="/salelisting" class="btn btn-primary">More Info</a>
   </div>
 </div></div>
     </div>
-    <div class="col">
+
+      <div class="col">
      <div class="p-3"><div class="card" style="width: 18rem;">
-  <img src="/images/sample1.png" class="card-img-top" alt="sample-img">
+  <img src="/images/sample3.png" class="card-img-top" alt="sample-img">
   <div class="card-body">
     <p class="card-text">
       <section id="listing-address" >
@@ -66,10 +68,12 @@
             <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
           </section>
     </p>
-    
-  </div>
+        <a href="/salelisting" class="btn btn-primary">More Info</a>
+   </div>
 </div></div>
     </div>
+  </div>
+</div>
 
 
 <div class="container px-4 text-right">
@@ -92,11 +96,35 @@
             <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
           </section>
     </p>
-    
+        <a href="/salelisting" class="btn btn-primary">More Info</a>
   </div>
 </div></div>
     </div>
-    <div class="col">
+
+      <div class="col">
+     <div class="p-3"><div class="card" style="width: 18rem;">
+  <img src="/images/sample3.png" class="card-img-top" alt="sample-img">
+  <div class="card-body">
+    <p class="card-text">
+      <section id="listing-address" >
+              <div class="text-center" id="street">{{forSaleListing.streetNumber}} {{forSaleListing.streetName}}</div>
+              {{#if forSaleListing.unitNumber}}
+              <div id="unit" class="text-center">Unit Number</div>
+              {{/if}}
+              <div class="text-center">{{forSaleListing.postalCode}}{{forSaleListing.city}}</div>
+          </section>
+          <section>
+            <div id="price">Listing Price: {{forSaleListing.price}}</div>
+            <div id="bedrooms">Number of Bedrooms: {{forSaleListing.bedrooms}}</div>
+            <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
+          </section>
+    </p>
+        <a href="/salelisting" class="btn btn-primary">More Info</a>
+  </div>
+</div></div>
+    </div>
+
+      <div class="col">
      <div class="p-3"><div class="card" style="width: 18rem;">
   <img src="/images/sample1.png" class="card-img-top" alt="sample-img">
   <div class="card-body">
@@ -114,32 +142,13 @@
             <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
           </section>
     </p>
-    
-  </div>
+        <a href="/salelisting" class="btn btn-primary">More Info</a>
+   </div>
 </div></div>
     </div>
-    <div class="col">
-     <div class="p-3"><div class="card" style="width: 18rem;">
-  <img src="/images/sample1.png" class="card-img-top" alt="sample-img">
-  <div class="card-body">
-    <p class="card-text">
-      <section id="listing-address" >
-              <div class="text-center" id="street">{{forSaleListing.streetNumber}} {{forSaleListing.streetName}}</div>
-              {{#if forSaleListing.unitNumber}}
-              <div id="unit" class="text-center">Unit Number</div>
-              {{/if}}
-              <div class="text-center">{{forSaleListing.postalCode}}{{forSaleListing.city}}</div>
-          </section>
-          <section>
-            <div id="price">Listing Price: {{forSaleListing.price}}</div>
-            <div id="bedrooms">Number of Bedrooms: {{forSaleListing.bedrooms}}</div>
-            <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
-          </section>
-    </p>
-    
   </div>
-</div></div>
-    </div>
+</div>
+
     
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
@@ -154,29 +163,4 @@
     </li>
   </ul>
 </nav>
-    {{!-- <section class="container ">
-      <section class="row">
-
-   <section class="images">
-  <div class="image-box">
-    <img src="/images/sample1.png" alt="Image Description">
-  </div>
-</section>
-
-        <section class="text-area">
-
-          <section id="listing-address" >
-              <div class="text-center" id="street">{{forSaleListing.streetNumber}} {{forSaleListing.streetName}}</div>
-              {{#if forSaleListing.unitNumber}}
-              <div id="unit" class="text-center">Unit Number</div>
-              {{/if}}
-              <div class="text-center">{{forSaleListing.postalCode}}{{forSaleListing.city}}</div>
-          </section>
-          <section>
-            <div id="price">Listing Price: {{forSaleListing.price}}</div>
-            <div id="bedrooms">Number of Bedrooms: {{forSaleListing.bedrooms}}</div>
-            <div id="bathrooms">Number of Bathrooms: {{forSaleListing.bathrooms}}</div>
-          </section>
-          </section>
-        </section>
-    </section> --}}
+   

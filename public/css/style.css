@@ -7,6 +7,7 @@
 :root {
   --primary-color: #254562;
   --text-color: #ffffff;
+  --submit: #45a049;
 }
 
 .navbar {
@@ -87,8 +88,8 @@
 }
 
 .login-button a:hover {
-  background-color: greenyellow;
-  color: black;
+  background-color: var(--submit);
+  color: var(--text-color);
 }
 
 /* CSS for the login button */
@@ -108,8 +109,8 @@
 }
 
 .signup-button button:hover {
-  background-color: greenyellow;
-  color: black;
+  background-color: var(--submit);
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -212,7 +213,7 @@ input[type="file"] {
 }
 
 .submit-btn {
-  background-color: #4caf50;
+  background-color: var(--submit);
   color: var(--text-color);
   border: none;
   padding: 10px 20px;
@@ -225,7 +226,7 @@ input[type="file"] {
 }
 
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color: var(--submit);
 }
 
 /* Mobile Version Styles */
@@ -319,12 +320,35 @@ input[type="file"] {
   font-size: calc(1.475rem + 2.7vw);
   line-height: 1.2;
 }
+
 footer {
   position: relative;
   bottom: 0;
   background-color: var(--primary-color);
 }
 
-.card {
-  margin: 20px;
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--submit);
+  color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+  .pagination li:not(.disabled):not(:first-child):not(:last-child) {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.custom-container {
+  display: flex;
+  justify-content: center;
 }

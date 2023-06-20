@@ -124,4 +124,19 @@ router.get("/newListing", (req, res) => {
   res.redirect("/login");
 });
 
+router.get("/rentlisting", (req, res) => {
+  if (req.session.loggedIn) {
+    res.render("./partials/forRentMain", { loggedIn: req.session.loggedIn });
+  } else {
+    res.redirect("/login");
+  }
+});
+
+router.get("/salelisting", (req, res) => {
+  if (req.session.loggedIn) {
+    res.render("./partials/forSaleMain", { loggedIn: req.session.loggedIn });
+  } else {
+    res.redirect("/login");
+  }
+});
 module.exports = router;

@@ -1,0 +1,26 @@
+<section class="container ">
+      <section class="row">
+
+   <section class="images">
+  <div class="image-box">
+    <img src="/images/sample1.png" alt="Image Description">
+  </div>
+</section>
+
+        <section class="text-area">
+
+          <section id="listing-address" >
+              <div class="text-center" id="street">{{forRentListing.streetNumber}} {{forRentListing.streetName}}</div>
+              {{#if forRentListing.unitNumber}}
+              <div id="unit" class="text-center">Unit Number</div>
+              {{/if}}
+              <div class="text-center">{{forRentListing.postalCode}}{{forRentListing.city}}</div>
+          </section>
+          <section>
+            <div id="price">Listing Price: {{forRentListing.price}}</div>
+            <div id="bedrooms">Number of Bedrooms: {{forRentListing.bedrooms}}</div>
+            <div id="bathrooms">Number of Bathrooms: {{forRentListing.bathrooms}}</div>
+          </section>
+          </section>
+        </section>
+    </section>
