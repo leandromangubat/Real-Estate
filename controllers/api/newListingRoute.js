@@ -46,8 +46,11 @@ router.post("/", upload.single("photo"), async (req, res) => {
       listingID: listingID,
     });
 
-    console.log(newListing, newPhoto);
-    res.status(200).json({ newListing, newPhoto });
+    if (listingInfo.listingType == "For Sale") {
+      res.status(200).redirect("/forsale");
+    } else if (listingInfo.listingType == "For Rent") {
+      res.status(200).redirect("/forrent");
+    }
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
