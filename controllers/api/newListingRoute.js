@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", upload.single("photo"), async (req, res) => {
+router.post("/", `upload`.single("photo"), async (req, res) => {
   try {
     let listingInfo = Object.assign(req.body, { ownerID: req.session.user_id });
 
