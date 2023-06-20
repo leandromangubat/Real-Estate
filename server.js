@@ -4,6 +4,9 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
+const handlebars = require("handlebars");
+const handlebarsHelpers = require("handlebars-helpers")();
+handlebars.registerHelper(handlebarsHelpers);
 
 //New package
 const multer = require("multer");
