@@ -1,21 +1,25 @@
-<div class="mt-3 mt-md-5 mx-md-5">
-  <h1 class="header-color">Featured Listings:</h1>
-</div><div>
-  {{#each sales}}
-    <div class="post-block">
-      <div class="card mb-3 bg-dark opacity-80">
-        <div class="card-header">
-          <h2 class="card-title p-2">
-            <a class="p-2 rounded text-white">{{streetNumber}}
-              {{streetName}}</a>
-          </h2>
-        </div>
-        <div class="card-body opacity-75 rounded">
-          <p>Author:
-            {{user.name}}
+{{#each sales}}
+  <div class="col">
+    <div class="p-3"><div class="card" style="width: 18rem;">
+        <img src="/images/sample3.png" class="card-img-top" alt="sample-img" />
+        <div class="card-body">
+          <p class="card-text">
+            <section id="listing-address">
+              <div class="text-center" id="street">{{streetNumber}}
+                {{streetName}}</div>
+              {{#if unitNumber}}
+                <div id="unit" class="text-center">Unit Number</div>
+              {{/if}}
+              <div class="text-center">{{postalCode}}{{city}}</div>
+            </section>
+            <section>
+              <div id="price">Listing Price: {{price}}</div>
+              <div id="bedrooms">Number of Bedrooms: {{bedrooms}}</div>
+              <div id="bathrooms">Number of Bathrooms: {{bathrooms}}</div>
+            </section>
           </p>
+          <a href="/salelisting" class="btn btn-primary">More Info</a>
         </div>
-      </div>
-    </div>
-  {{/each}}
-</div>
+      </div></div>
+  </div>
+{{/each}}
