@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Property, User } = require("../models/");
+const { Property, User, ListingPhotos } = require("../models/");
 const withAuth = require("../utils/auth");
 
 // get all sales for homepage
@@ -84,6 +84,36 @@ router.get("/forRent", (req, res) => {
 
 router.get("/forSale", (req, res) => {
   res.render("./partials/forSaleListing");
+});
+
+router.get("/forSale/:id", async (req, res) => {
+  try {
+    const forSale = await Property.findByPk(req.params.id, {
+      include: [
+        User,
+        {
+          model: ListingPhotos,
+          attributes: ["url"],
+        },
+      ],
+    });
+    if (!forSale) {
+      return res
+        .status(404)
+        .json({ message: "No listing found with this id!" });
+    }
+    res.json(forSale);
+    const forSaleListing = forSale.map((listing) =>
+      listing.get({ plain: true })
+    );
+    res.render("./partials/forSaleListing", {
+      forSaleListing,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "server error" });
+  }
 });
 
 router.get("/newListing", (req, res) => {

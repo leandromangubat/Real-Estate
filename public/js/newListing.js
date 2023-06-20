@@ -27,7 +27,6 @@ async function newListing(event) {
     bedrooms: document.querySelector("#bedrooms").value.trim(),
     bathrooms: document.querySelector("#bathrooms").value.trim(),
     listingType: document.querySelector("#listing-type").value.trim(),
-    // ownerID:
   };
 
   if (newListingInfo) {
@@ -39,8 +38,8 @@ async function newListing(event) {
       });
 
       if (response.ok) {
-        //document.location.replace("/");
         alert("Property successfully uploaded!");
+        document.location.replace("/forsale");
       } else {
         alert(response.statusText);
       }

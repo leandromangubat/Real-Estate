@@ -18,8 +18,7 @@ ListingPhotos.init(
         key: "id",
       },
     },
-    
-    url: {
+    filename: {
       type: DataTypes.STRING,
       allowNull: true,
     },
