@@ -347,3 +347,8 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+}
