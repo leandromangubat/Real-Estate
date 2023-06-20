@@ -79,11 +79,11 @@ To use the House Hunter application, follow the steps below:
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit them: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Open a pull request.
+- Fork the repository.
+- Create a new branch: `git checkout -b feature/your-feature-name`
+- Make your changes and commit them: `git commit -m 'Add some feature'`
+- Push to the branch: `git push origin feature/your-feature-name`
+- Open a pull request.
 
 ## Credits
 
