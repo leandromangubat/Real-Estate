@@ -1,24 +1,25 @@
-<div class="mt-3 mt-md-5 mx-md-5">
-  <h1 class="header-color">Featured Listings:</h1>
-</div>
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/images/sample1.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/images/sample2.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/images/sample3.png" class="d-block w-100" alt="...">
-    </div>
+{{#each sales}}
+  <div class="col">
+    <div class="p-3"><div class="card" style="width: 18rem;">
+        <img src="/images/sample3.png" class="card-img-top" alt="sample-img" />
+        <div class="card-body">
+          <p class="card-text">
+            <section id="listing-address">
+              <div class="text-center" id="street">{{streetNumber}}
+                {{streetName}}</div>
+              {{#if unitNumber}}
+                <div id="unit" class="text-center">Unit Number</div>
+              {{/if}}
+              <div class="text-center">{{postalCode}}{{city}}</div>
+            </section>
+            <section>
+              <div id="price">Listing Price: {{price}}</div>
+              <div id="bedrooms">Number of Bedrooms: {{bedrooms}}</div>
+              <div id="bathrooms">Number of Bathrooms: {{bathrooms}}</div>
+            </section>
+          </p>
+          <a href="/salelisting" class="btn btn-primary">More Info</a>
+        </div>
+      </div></div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+{{/each}}

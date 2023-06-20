@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     // we need to get all Sales and include the User for each
     const saleData = await Property.findAll({
-      include: [User],
+      include: [{ model: User, attributes: ["name"] }],
     });
     // serialize the data
     const sales = saleData.map((sales) => sales.get({ plain: true }));
