@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: ListingPhotos,
-          attributes: ["url"],
+          attributes: ["filename"],
         },
       ],
     });
@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
     );
     res.render("rentListing", {
       forRentListings,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json({ message: "server error" });
@@ -42,7 +42,7 @@ router.get("/:id", async (req, res) => {
         },
         {
           model: ListingPhotos,
-          attributes: ["url"],
+          attributes: ["filename"],
         },
       ],
     });
@@ -52,7 +52,7 @@ router.get("/:id", async (req, res) => {
     );
     res.render("forRentListing", {
       forRentListing,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json({ message: "server error" });
