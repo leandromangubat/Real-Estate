@@ -38,8 +38,8 @@ async function newListing(event) {
       });
 
       if (response.ok) {
-        //document.location.replace("/");
         alert("Property successfully uploaded!");
+        document.location.replace("/forsale");
       } else {
         alert(response.statusText);
       }
