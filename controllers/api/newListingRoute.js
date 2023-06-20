@@ -39,16 +39,16 @@ router.post("/", upload.single("photo"), async (req, res) => {
 
     const listingID = newListing.id;
 
-    console.log(photo);
-
     const newPhoto = await ListingPhotos.create({
       filename: req.file.filename,
       listingID: listingID,
     });
 
     if (listingInfo.listingType == "For Sale") {
+      alert("Listing created successfully!");
       res.status(200).redirect("/forsale");
     } else if (listingInfo.listingType == "For Rent") {
+      alert("Listing created successfully!");
       res.status(200).redirect("/forrent");
     }
   } catch (err) {
