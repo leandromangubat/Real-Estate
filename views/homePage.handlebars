@@ -1,4 +1,4 @@
-{{#limit sales 6}}
+<div class="row">
   {{#each sales}}
     <div class="col">
       <div class="p-3"><div class="card" style="width: 18rem;">
@@ -13,9 +13,10 @@
                 <div class="text-center" id="street">{{streetNumber}}
                   {{streetName}}</div>
                 {{#if unitNumber}}
-                  <div id="unit" class="text-center">Unit Number</div>
+                  <div id="unit" class="text-center">Unit Number:
+                    {{unitNumber}}</div>
                 {{/if}}
-                <div class="text-center">{{postalCode}}{{city}}</div>
+                <div class="text-center">{{postalCode}} {{city}}</div>
               </section>
               <section>
                 <div id="price">Listing Price: {{price}}</div>
@@ -28,4 +29,4 @@
         </div></div>
     </div>
   {{/each}}
-{{/limit}}
+</div>
