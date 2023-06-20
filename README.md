@@ -10,7 +10,6 @@
 [![Nodemon Badge](https://img.shields.io/badge/Nodemon-76D04B?logo=nodemon&logoColor=fff&style=flat)](https://nodemon.io/)
 [![Insomnia Badge](https://img.shields.io/badge/Insomnia-4000BF?logo=insomnia&logoColor=fff&style=flat)](https://insomnia.rest/)
 
-
 ## Description
 
 House Hunter is a web application where you can search for properties, upload your property for sale or rent and it is built with Node.js and Express.js that serves as a RESTful API for searching and listing real estate properties. It utilizes Handlebars.js as the template engine for rendering dynamic views, MySQL as the database management system, and the Sequelize ORM for interacting with the database. The project follows the MVC (Model-View-Controller) paradigm to maintain a well-organized folder structure. </br>
@@ -27,8 +26,8 @@ House Hunter is a web application where you can search for properties, upload yo
 
 Run the [House Hunter](https://immense-woodland-75023-12b9f87d1bf1.herokuapp.com/) application on Heroku
 The following photos show how the application looks:
-![Alt text]()
-![Alt text]()
+![Alt text](./public/images/HouseHunter1.png)
+![Alt text](./public/images/HouseHunter%20Signup.png)
 
 ## Technologies Used
 
