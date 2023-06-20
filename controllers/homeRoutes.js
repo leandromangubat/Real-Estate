@@ -38,7 +38,7 @@ router.get("/sale/:id", withAuth, async (req, res) => {
       // serialize the data
       const sale = saleData.get({ plain: true });
       console.log(sale);
-      res.render("single-sale", { sale, loggedI: req.session.loggedIn });
+      res.render("single-sale", { sale, loggedIn: req.session.loggedIn });
     } else {
       res.status(404).end();
     }
