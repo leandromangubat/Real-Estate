@@ -82,6 +82,30 @@ router.get("/forRent", (req, res) => {
   res.render("./partials/forRentListing");
 });
 
+router.get("/forRent/:id", async (req, res) => {
+  try {
+    const forRent = await Property.findByPk(req.params.id, {
+      include: [User, ListingPhotos],
+    });
+    if (!forRent) {
+      return res
+        .status(404)
+        .json({ message: "No listing found with this id!" });
+    }
+    res.json(forRent);
+    const forRentListing = forRent.map((listing) =>
+      listing.get({ plain: true })
+    );
+    res.render("./partials/forRentListing", {
+      forRentListing,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "server error" });
+  }
+});
+
 router.get("/forSale", (req, res) => {
   res.render("./partials/forSaleListing");
 });
@@ -89,13 +113,7 @@ router.get("/forSale", (req, res) => {
 router.get("/forSale/:id", async (req, res) => {
   try {
     const forSale = await Property.findByPk(req.params.id, {
-      include: [
-        User,
-        {
-          model: ListingPhotos,
-          attributes: ["url"],
-        },
-      ],
+      include: [User, ListingPhotos],
     });
     if (!forSale) {
       return res
