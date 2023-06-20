@@ -336,3 +336,19 @@ footer {
   background-color: var(--submit);
   color: var(--text-color);
 }
+
+@media (max-width: 480px) {
+  .pagination li:not(.disabled):not(:first-child):not(:last-child) {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+}
