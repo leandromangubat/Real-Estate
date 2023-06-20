@@ -45,11 +45,9 @@ router.post("/", upload.single("photo"), async (req, res) => {
     });
 
     if (listingInfo.listingType == "For Sale") {
-      alert("Listing created successfully!");
-      res.status(200).redirect("/forsale");
+      res.status(200).redirect("/");
     } else if (listingInfo.listingType == "For Rent") {
-      alert("Listing created successfully!");
-      res.status(200).redirect("/forrent");
+      res.status(200).redirect("/");
     }
   } catch (err) {
     console.log(err);
