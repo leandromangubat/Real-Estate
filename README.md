@@ -28,6 +28,7 @@ Run the [House Hunter](https://immense-woodland-75023-12b9f87d1bf1.herokuapp.com
 The following photos show how the application looks:
 ![Alt text](./public/images/HouseHunter1.png)
 ![Alt text](./public/images/HouseHunter%20Signup.png)
+![Alt text](./public/images/HouseHunter%20About%20Us.png.png)
 
 ## Technologies Used
 
